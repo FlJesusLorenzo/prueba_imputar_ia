@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google GenAI - Método Directo (API Fetch)
 // @namespace    http://tampermonkey.net/
-// @version      4.3
+// @version      4.4
 // @description  Se conecta a la API de Gemini directamente usando GM_xmlhttpRequest, sin la biblioteca @google/genai.
 // @author       TuNombre
 // @match        https://git.*
@@ -64,7 +64,7 @@ ${comments}
 Genera una descripción para la imputación de horas que cumpla estos requisitos:
 1.  **Breve:** No más de dos frases.
 2.  **Descriptiva:** Debe quedar claro qué se ha hecho y cuál ha sido el progreso.
-3.  **Enfocada:** Céntrate solo en la "Actividad Realizada Hoy".`;
+3.  **Enfocada:** Céntrate solo en la "Actividad Realizada Hoy y los comentarios del usuario, en caso de que el usuario no haya realizado ningun comentario o ningun movimiento sobre la tarea deberás mostrar un mensaje de que no se puede imputar sobre una tarea en la que no has generado comentario o movimiento".`;
 
         // Comprobación de que la clave fue editada
         if (!API_KEY || API_KEY === "AIzaSy...") {
