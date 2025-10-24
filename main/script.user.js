@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google GenAI - Método Directo (API Fetch)
 // @namespace    http://tampermonkey.net/
-// @version      4.1
+// @version      4.2
 // @description  Se conecta a la API de Gemini directamente usando GM_xmlhttpRequest, sin la biblioteca @google/genai.
 // @author       TuNombre
 // @match        https://git.*
@@ -41,7 +41,7 @@
 
     function gen_ia_description(){
         let issue_desc = document.querySelector(".detail-page-description").textContent
-        let day = "Oct 2, 2025"
+        let day = new Date
         let comments = document.getElementById("notes-list").textContent
 
         // El texto que quieres enviar a la IA
