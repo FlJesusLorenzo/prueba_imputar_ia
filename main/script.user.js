@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google GenAI - Método Directo (API Fetch)
 // @namespace    http://tampermonkey.net/
-// @version      4.2
+// @version      4.3
 // @description  Se conecta a la API de Gemini directamente usando GM_xmlhttpRequest, sin la biblioteca @google/genai.
 // @author       TuNombre
 // @match        https://git.*
@@ -43,12 +43,13 @@
         let issue_desc = document.querySelector(".detail-page-description").textContent
         let day = new Date
         let comments = document.getElementById("notes-list").textContent
+        let user = document.getElementById("disclosure-6").getElementsByClassName("gl-font-bold")[0].textContent
 
         // El texto que quieres enviar a la IA
         const promptText = `
 Actúa como un desarrollador de software que debe resumir su trabajo del día para una imputación de horas. Tu objetivo es crear una descripción breve pero clara, basada únicamente en la actividad de hoy.
 **Día**: ${day}
-**Usuario**:
+**Usuario**: ${user}
 
 **Contexto de la Tarea:**
 ${issue_desc}
