@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google GenAI - Método Directo (API Fetch)
 // @namespace    http://tampermonkey.net/
-// @version      4.0
+// @version      4.1
 // @description  Se conecta a la API de Gemini directamente usando GM_xmlhttpRequest, sin la biblioteca @google/genai.
 // @author       TuNombre
 // @match        https://git.*
@@ -10,6 +10,8 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @updateURL    https://github.com/FlJesusLorenzo/prueba_imputar_ia/raw/refs/heads/main/main/script.user.js
+// @downloadURL  https://github.com/FlJesusLorenzo/prueba_imputar_ia/raw/refs/heads/main/main/script.user.js
 // ==/UserScript==
 
 (function() {
